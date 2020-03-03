@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+body{
+	font-family: 'Montserrat', sans serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background: black;
+}
+
+h1{
+	text-align: center;
+	color: white;
+	font-size: 50px; 
+}
+
+p{
+	color: white;
+}
+
+#myChart{
+	color: white;
+}
+
+.container{
+	display: grid;
+	grid-template-columns: 15px 1fr;
+	grid-template-rows: 50px 1fr 50px; 
+	grid-template-areas: 
+		"aside header"
+		"aside main"
+		"aside footer";
+	
+}
+
+.sub-main {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+    padding: 50px;
+    height: 300px; /* Force our height since we don't have actual content yet */
+    color: white;
+  }
+
+
+  .sub-main2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+    padding: 50px;
+    height: 300px; /* Force our height since we don't have actual content yet */
+    color: white;
+  }
+
+  .sub-main3 {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+    padding: 50px;
+    height: 300px; /* Force our height since we don't have actual content yet */
+    color: white;
+  }
+
+.main{
+	grid-area: main;
+}
+
+.header{
+	grid-area: header;
+}
+
+.footer{
+	grid-area: footer;
+}
+
+.aside{
+	grid-area: aside;
+}
