@@ -17,10 +17,6 @@ p{
 	color: white;
 }
 
-#myChart{
-	color: white;
-}
-
 .container{
 	display: grid;
 	grid-template-columns: 15px 1fr;
@@ -36,7 +32,7 @@ p{
     display: flex;
     justify-content: space-between;
     margin: 50px;
-    padding: 50px;
+    padding: 200px;
     height: 300px; /* Force our height since we don't have actual content yet */
     color: white;
   }
@@ -46,7 +42,7 @@ p{
     display: flex;
     justify-content: space-between;
     margin: 50px;
-    padding: 50px;
+    padding: 200px;
     height: 300px; /* Force our height since we don't have actual content yet */
     color: white;
   }
@@ -55,7 +51,7 @@ p{
     display: flex;
     justify-content: space-between;
     margin: 50px;
-    padding: 50px;
+    padding: 200px;
     height: 300px; /* Force our height since we don't have actual content yet */
     color: white;
   }
@@ -75,3 +71,53 @@ p{
 .aside{
 	grid-area: aside;
 }
+
+/* media queries*/
+
+@media screen and (max-width: 2546px){
+
+	.sub-main{
+		padding: 200px
+	}
+
+	.sub-main2{
+		padding: 200px
+	}
+
+	.sub-main3{
+		padding: 200px
+	}
+} 
+
+@media screen and (max-width: 1025px){
+
+	.sub-main{
+		padding: 150px;
+	}
+
+	.sub-main2{
+		padding: 150px;
+	}
+
+	.sub-main3{
+		padding: 150px;
+	}
+} 
+
+@media screen and (max-width: 375px){
+
+	.sub-main{
+		padding: 100px;
+	}
+
+	.sub-main2{
+		padding: 100px;
+	}
+
+	.sub-main3{
+		padding: 100px;
+	}
+} 
+
+
+

@@ -40,33 +40,66 @@
 					</script>
 				</div>
 				<div class="sub-main2">
-					<canvas id="myDoughnutChart"></canvas>
-					<script type="text/javascript">
-						Chart.defaults.global.defaultFontColor = '#ffffff';
+				 	<canvas id="doughnutChart"></canvas>
+			 		<script type="text/javascript">
+					Chart.defaults.global.defaultFontColor = '#ffffff';
 
-						var ctx = document.getElementById('myBarChart').getContext('2d');
-						var myBarChart = new Chart(ctx, {
-						    type: 'doughnut',
+					var ctx = document.getElementById('doughnutChart').getContext('2d');
+					var chart = new Chart(ctx, {
+					    // The type of chart we want to create
+					    type: 'doughnut',
 
-						    data: data,
-						    options: options
-						});
-					
+					    // The data for our dataset
+					     data: {
+					        labels: ['Maximale snelheid', 'Gemiddelde snelheid', 'Minimum snelheid'],
+					        datasets: [{
+					            label: 'Gemiddlede snelheid',
+					            backgroundColor: [
+					            				'rgb(204, 153, 255)',
+					            				'rgb(255, 153, 204)',
+					            				'rgb(255, 255, 143)'
+
+
+					            ],
+					            borderColor: [
+					            				'rgb(204, 153, 255)',
+					            				'rgb(255, 153, 204)',
+					            				'rgb(255, 255, 153)'
+
+					            ],
+					            data: [20000, 18000, 10000]
+					        }]
+					    },
+
+					    // Configuration options go here
+					    options: {}
+					});
 				</script>
 				</div>
 				<div class="sub-main3">
-					<canvas id="myBarChart"></canvas>
-					<script type="text/javascript">
-						Chart.defaults.global.defaultFontColor = '#ffffff';
+					<canvas id="barChart"></canvas>
+			 		<script type="text/javascript">
+					Chart.defaults.global.defaultFontColor = '#ffffff';
 
-						var ctx = document.getElementById('myBarChart').getContext('2d');
-						var myBarChart = new Chart(ctx, {
-						    type: 'bar',
-						    
-						    data: data,
-						    options: options
-						});
-					
+					var ctx = document.getElementById('barChart').getContext('2d');
+					var chart = new Chart(ctx, {
+					    // The type of chart we want to create
+					    type: 'bar',
+
+					    // The data for our dataset
+					    data: {
+					        labels: ['Dag 1', 'Dag 5', 'Dag 9', 'Dag 13', 'Dag 17', 'Dag 21', 'Dag 25'],
+					        datasets: [{
+					            label: 'Water',
+					            backgroundColor: 'rgb(204, 229, 255)',
+					            borderColor: 'rgb(204, 229, 255)',
+					            data: [5000, 4399, 3873, 2899, 2109, 1649, 1209]
+					        }]
+					    },
+
+					    // Configuration options go here
+					    options: {}
+					});
 				</script>
 				</div>
 			</main>
