@@ -1,0 +1,125 @@
+<DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Space X Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="dashboard_versie2.css">
+</head>
+<body>
+
+<img src="images/logo.png" alt="spacexlogo" height="80" width="340">
+
+<div class="row">
+  <div class="column">
+    <h2> Verbruikte brandstof</h2>
+    <p>Hier is te zien hoeveel brandstof er is verbuikt.<br>
+
+    <canvas id="myChart"></canvas>
+          <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+          <script type="text/javascript">
+            Chart.defaults.global.defaultFontColor = '#ffffff';
+
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var chart = new Chart(ctx, {
+                // The type of chart we want to create
+                type: 'line',
+
+                // The data for our dataset
+                data: {
+                    labels: ['Dag 1', 'Dag 5', 'Dag 9', 'Dag 13', 'Dag 17', 'Dag 21', 'Dag 25'],
+                    datasets: [{
+                        label: 'Brandstof',
+                        backgroundColor: 'rgb(255, 99, 132)',
+                        borderColor: 'rgb(255, 99, 132)',
+                        data: [2000, 1654, 1209, 1099, 847, 655, 500]
+                    }]
+                },
+
+                // Configuration options go here
+                options: {}
+            });
+          </script>
+
+  </p>
+   </div>
+  
+  <div class="column">
+    <h2>Snelheid</h2>
+    <p>Hier is te zien wat de maximale, gemiddelde en minimale snelheid is van het schip.<br>
+
+    <canvas id="doughnutChart"></canvas>
+          <script type="text/javascript">
+          Chart.defaults.global.defaultFontColor = '#ffffff';
+
+          var ctx = document.getElementById('doughnutChart').getContext('2d');
+          var chart = new Chart(ctx, {
+              // The type of chart we want to create
+              type: 'doughnut',
+
+              // The data for our dataset
+               data: {
+                  labels: ['Maximale snelheid', 'Gemiddelde snelheid', 'Minimum snelheid'],
+                  datasets: [{
+                      label: 'Gemiddlede snelheid',
+                      backgroundColor: [
+                              'rgb(204, 153, 255)',
+                              'rgb(255, 153, 204)',
+                              'rgb(255, 255, 143)'
+
+
+                      ],
+                      borderColor: [
+                              'rgb(204, 153, 255)',
+                              'rgb(255, 153, 204)',
+                              'rgb(255, 255, 153)'
+
+                      ],
+                      data: [20000, 18000, 10000]
+                  }]
+              },
+
+              // Configuration options go here
+              options: {}
+          });
+        </script>
+
+    </p>
+  </div>
+  
+  <div class="column">
+    <h2>Water</h2>
+    <p>Hier is het water verbruik te zien over de periode van de vlucht.<br>
+
+      <canvas id="barChart"></canvas>
+          <script type="text/javascript">
+          Chart.defaults.global.defaultFontColor = '#ffffff';
+
+          var ctx = document.getElementById('barChart').getContext('2d');
+          var chart = new Chart(ctx, {
+              // The type of chart we want to create
+              type: 'bar',
+
+              // The data for our dataset
+              data: {
+                  labels: ['Dag 1', 'Dag 5', 'Dag 9', 'Dag 13', 'Dag 17', 'Dag 21', 'Dag 25'],
+                  datasets: [{
+                      label: 'Water',
+                      backgroundColor: 'rgb(204, 229, 255)',
+                      borderColor: 'rgb(204, 229, 255)',
+                      data: [5000, 4399, 3873, 2899, 2109, 1649, 1209]
+                  }]
+              },
+
+              // Configuration options go here
+              options: {}
+          });
+        </script>
+
+    </p>
+  </div>
+ 
+</div>
+
+</body>
+</html>
