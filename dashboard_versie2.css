@@ -1,63 +1,44 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 body{
   font-family: 'Montserrat', sans serif;
-  margin: 0;
+  margin: 10px;
   padding: 0;
   box-sizing: border-box;
-  background: black;
+  background-color: black;
+  color: white;
 }
 
+/*hoe de dashboard wordt vormgegeven*/
 .column {
   float: left;
   width: 33%;
   padding: 20px;
 }
-
+/*hoe de dashboard wordt vormgegeven*/
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* Zodra het scherm minimaal 992px breed is, drie columns schermvullend naast elkaar */
-@media screen and (min-width: 991px) {
+/*Bij een schermgrote van 1200px, wordt de dashboard naast elkaar getoont*/
+@media screen and (min-width: 1200px) {
   .column {
-    width: 33.3%;
+    width: 30%;
   }
 }
 
-/* Zodra het scherm 992px breed of minder is, ga van drie naar twee columns */
+/*Bij een schermgrote van 992px, wordt de dashboard onder elkaar getoont*/
 @media screen and (max-width: 992px) {
   .column {
-    width: 50%;
+    width: 80%;
   }
 }
 
-/* Zodra het scherm 600px breed of minder is, stapel de columns boven elkaar i.p.v naast elkaar */
+/*Bij een schermgrote van 600px, wordt de dashboard onder elkaar getoont*/
 @media screen and (max-width: 600px) {
   .column {
-    width: 100%;
+    width: 70%;
     padding: 35px;
-  }
-}
-
-/*body bg colour*/
-body {
-  background-color: black;
-  color: white;
-  margin: 30px;
-}
-
-/* Scherm 992px en < breed (Twee columns) */
-@media screen and (max-width: 992px) {
-  body {
-    color: white;
-  }
-}
-
-/* Scherm 600px en < breed (Een column) */
-@media screen and (max-width: 600px) {
-  body {
-    color: white;
   }
 }

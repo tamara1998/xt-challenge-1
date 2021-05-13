@@ -9,7 +9,9 @@
 <body>
 
 <img src="images/logo.png" alt="spacexlogo" height="80" width="340">
-
+<p>
+	Welkom bij de eerste vlucht met Space X naar de nieuwe kolonie naar Mars. Op dit dashboard is alle benodigde informatie te vinden over uw vlucht. Wij wensen u een fijne reis en veel succes op de nieuwe kolonie.
+</p>
 <div class="row">
   <div class="column">
     <h2> Verbruikte brandstof</h2>
@@ -22,12 +24,12 @@
 
             var ctx = document.getElementById('myChart').getContext('2d');
             var chart = new Chart(ctx, {
-                // The type of chart we want to create
+                // het type chart dat hier komt
                 type: 'line',
 
-                // The data for our dataset
+                // de data voor het verbruik van de brandstof tijdens de vlucht. 
                 data: {
-                    labels: ['Dag 1', 'Dag 5', 'Dag 9', 'Dag 13', 'Dag 17', 'Dag 21', 'Dag 25'],
+                    labels: ['Dag 1', 'Dag 5', 'Dag 10', 'Dag 15', 'Dag 20', 'Dag 25'],
                     datasets: [{
                         label: 'Brandstof',
                         backgroundColor: 'rgb(255, 99, 132)',
@@ -36,7 +38,6 @@
                     }]
                 },
 
-                // Configuration options go here
                 options: {}
             });
           </script>
@@ -54,10 +55,10 @@
 
           var ctx = document.getElementById('doughnutChart').getContext('2d');
           var chart = new Chart(ctx, {
-              // The type of chart we want to create
+              // het type chart dat hier komt
               type: 'doughnut',
 
-              // The data for our dataset
+              // de data voor de snelheid van het ruimteschip
                data: {
                   labels: ['Maximale snelheid', 'Gemiddelde snelheid', 'Minimum snelheid'],
                   datasets: [{
@@ -79,7 +80,6 @@
                   }]
               },
 
-              // Configuration options go here
               options: {}
           });
         </script>
@@ -97,21 +97,20 @@
 
           var ctx = document.getElementById('barChart').getContext('2d');
           var chart = new Chart(ctx, {
-              // The type of chart we want to create
+              // het type chart dat hier komt
               type: 'bar',
 
-              // The data for our dataset
+              // de data voor het verbruikte water tijdens de vlucht
               data: {
-                  labels: ['Dag 1', 'Dag 5', 'Dag 9', 'Dag 13', 'Dag 17', 'Dag 21', 'Dag 25'],
+                  labels: ['Dag 1', 'Dag 5', 'Dag 10', 'Dag 15', 'Dag 20','Dag 25'],
                   datasets: [{
                       label: 'Water',
                       backgroundColor: 'rgb(204, 229, 255)',
                       borderColor: 'rgb(204, 229, 255)',
-                      data: [5000, 4399, 3873, 2899, 2109, 1649, 1209]
+                      data: [5000, 4399, 3873, 2899, 2109, 1209]
                   }]
               },
 
-              // Configuration options go here
               options: {}
           });
         </script>
